@@ -27,7 +27,7 @@ public class HomeController {
 		model.addAttribute("films",films);
 		model.addAttribute("genres",genres);
 
-	 return "header";
+	 return "accueil";
 	 }
 
 }
