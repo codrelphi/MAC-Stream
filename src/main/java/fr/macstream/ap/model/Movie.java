@@ -6,19 +6,19 @@ public class Movie {
 
 	private boolean adult;
 	private String backdrop_path;
-    private List<Integer> genre_ids;
-    private Integer id;
-    private String original_language;
-    private String original_title;
-    private String overview ;
-    private Float popularity;
-    private String  poster_path;
-    private String  release_date;
-    private String title;
-    private boolean video;
-    private Float vote_average;
-    private Float vote_count;
-	
+	private List<Integer> genre_ids;
+	private Integer id;
+	private String original_language;
+	private String original_title;
+	private String overview ;
+	private Float popularity;
+	private String  poster_path;
+	private String  release_date;
+	private String title;
+	private boolean video;
+	private Float vote_average;
+	private Float vote_count;
+
 	public Movie() {
 	}
 
@@ -154,6 +154,6 @@ public class Movie {
 		this.vote_count = vote_count;
 	}
 
-	
+
 }
 

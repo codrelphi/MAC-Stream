@@ -5,7 +5,7 @@ import java.util.List;
 
 public class GenresResponse {
 
-	 private List<Genres> genres;
+	private List<Genres> genres;
 
 	public GenresResponse(List<Genres> genres) {
 		super();

@@ -6,7 +6,7 @@ import javax.persistence.Id;
 public class GenresEntity {
 
 	@Id 
-    private Integer idGenre;	
+	private Integer idGenre;	
 	private String genre;
 	public GenresEntity(Integer idGenre, String genre) {
 		super();
