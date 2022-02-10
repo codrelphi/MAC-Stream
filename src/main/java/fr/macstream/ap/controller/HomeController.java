@@ -7,24 +7,27 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import fr.macstream.ap.model.Genre;
-import fr.macstream.ap.repository.FilmRepository;
+import fr.macstream.ap.model.GenresEntity;
+import fr.macstream.ap.model.MovieEntity;
+import fr.macstream.ap.repository.MovieRepository;
 import fr.macstream.ap.repository.GenreRepository;
 
 @Controller
 public class HomeController {
 	@Autowired
 	GenreRepository genreRepository;
+	@Autowired
+	MovieRepository movieRepository;
+	
 	
 	@GetMapping("/home") 
 	public String helloWorld(Model model) {
-		List<Film> films = FilmRepository.findAll();
-		List<Genre> genres = GenreRepository.findAll();
+		List<MovieEntity> films = movieRepository.findAll();
+		List<GenresEntity> genres = genreRepository.findAll();
+		model.addAttribute("films",films);
+		model.addAttribute("genres",genres);
 
-		model.addAllAttributes("films",films);
-		model.addAllAttributes("genres",genres);
-
-	 return "accueil";
+	 return "header";
 	 }
 
 }

@@ -45,41 +45,11 @@
 						role="button" data-toggle="dropdown" aria-haspopup="true"
 						aria-expanded="false"> FILMS </a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="#">TOUS LES FILMS </a> <a
-								class="dropdown-item" href="#">ACTION</a> <a
-								class="dropdown-item" href="#">AVENTURE</a> <a
-								class="dropdown-item" href="#">DRAME</a> <a
-								class="dropdown-item" href="#">FANTASTIQUE</a> <a
-								class="dropdown-item" href="#">HISTOIRE</a> <a
-								class="dropdown-item" href="#">GUERRE</a>
-						</div></li>
-
-					<li class="nav-item dropdown"><a
-						class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-						role="button" data-toggle="dropdown" aria-haspopup="true"
-						aria-expanded="false"> SERIES </a>
-						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="#">TOUTES LES SERIES </a> <a
-								class="dropdown-item" href="#">ACTION</a> <a
-								class="dropdown-item" href="#">AVENTURE</a> <a
-								class="dropdown-item" href="#">DRAME</a> <a
-								class="dropdown-item" href="#">FANTASTIQUE</a> <a
-								class="dropdown-item" href="#">HISTOIRE</a> <a
-								class="dropdown-item" href="#">GUERRE</a>
-						</div></li>
-
-					<li class="nav-item dropdown"><a
-						class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-						role="button" data-toggle="dropdown" aria-haspopup="true"
-						aria-expanded="false"> ANIMES </a>
-						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="#">TOUS LES ANIMES </a> <a
-								class="dropdown-item" href="#">ACTION</a> <a
-								class="dropdown-item" href="#">AVENTURE</a> <a
-								class="dropdown-item" href="#">DRAME</a> <a
-								class="dropdown-item" href="#">FANTASTIQUE</a> <a
-								class="dropdown-item" href="#">HISTOIRE</a> <a
-								class="dropdown-item" href="#">GUERRE</a>
+							<c:if test="${! empty genres}">
+							<c:forEach var="genre" items="${genres}">
+								<a class="dropdown-item" href="#">${genre.genre}</a>
+							</c:forEach>
+							</c:if>	
 						</div></li>
 
 					<li class="nav-item"><a class="nav-link disabled" href="#">PLAYLIST</a>

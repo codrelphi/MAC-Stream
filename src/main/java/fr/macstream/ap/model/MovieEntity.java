@@ -1,13 +1,21 @@
 package fr.macstream.ap.model;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
 @Entity(name = "Films")
 public class MovieEntity {
 
-	@Id 
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer idFilm;	
 	private String imagePath;
 	private String langueOriginal;
@@ -24,6 +32,9 @@ public class MovieEntity {
 	private int idGenre;
 	private String type;
 
+	@ManyToMany(mappedBy="playlist", fetch=FetchType.LAZY)
+	private Set<User> users = new HashSet<>();
+	
 	public MovieEntity() {
 		super();
 		// TODO Auto-generated constructor stub
