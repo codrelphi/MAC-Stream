@@ -29,6 +29,16 @@ public class User{
 	inverseJoinColumns= {@JoinColumn(name="idFilm")})
 	private Set<MovieEntity> playlist = new HashSet<>();
 	
+	public Set<MovieEntity> getPlaylist() {
+		return playlist;
+	}
+
+
+	public void setPlaylist(Set<MovieEntity> playlist) {
+		this.playlist = playlist;
+	}
+
+
 	public User() {
 		super();
 	}
