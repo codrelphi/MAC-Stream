@@ -9,7 +9,6 @@
 <%@ include file="menuUser.jsp" %>
 </c:otherwise>
 </c:choose>
-<main>
 
 <main role="main">
 

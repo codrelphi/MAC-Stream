@@ -15,7 +15,7 @@
 			<div>
 				<form>
 					<div class="form-group">
-						<label for="login">Email address</label> <input
+						<label for="login">Adresse courriel</label> <input
 							type="email" class="form-control" id="login"
 							aria-describedby="emailHelp" placeholder="Enter email"> <small
 							id="emailHelp" class="form-text text-muted">Nous ne
@@ -25,6 +25,10 @@
 						<label for="motdepasse">Mot de passe</label> <input
 							type="password" class="form-control" id="motdepasse"
 							placeholder="Password">
+					</div>
+					<div class="form-group">
+						<label for="nom">Nom de compte</label>
+						<input type="text" id="nom" aria-describedby="nomHelp" placeholder="Entrez votre nom de compte" class="form-text text-muted"
 					</div>
 					<div class="form-group form-check">
 						<input type="checkbox" class="form-check-input" id="exampleCheck1">
