@@ -12,7 +12,7 @@
 	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 	crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" hred="assets/fontawesome/css/all.css"/>	
-<link rel="stylesheet" type="text/css" href="assets/slider/css/demo.css" />
+<!--   <link rel="stylesheet" type="text/css" href="assets/slider/css/demo.css" /> -->
 <link rel="stylesheet" type="text/css" href="assets/slider/css/elastislide.css" />
 <link rel="stylesheet" type="text/css" href="assets/slider/css/custom.css" />
 <script
@@ -27,3 +27,5 @@
 	crossorigin="anonymous"></script>
 <script src="assets/slider/js/modernizr.custom.17475.js"></script>		
 </head>
+
+ 
