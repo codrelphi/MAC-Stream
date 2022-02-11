@@ -9,7 +9,6 @@
 
 			<!-- Grid column -->
 			<div class="col-md-6 mx-auto">
-
 				<p>Notre portail met à votre disposition des milliers de fimls
 					de tout genre. Disponibles en streaming gratuit et illimité, en VF
 					et VOSTFR, avec une inscription.</p>
@@ -44,7 +43,6 @@
 
 
 <script type="text/javascript" src="assets/slider/js/jquerypp.custom.js"></script>
-<<<<<<< HEAD
 <script type="text/javascript"
 	src="assets/slider/js/jquery.elastislide.js"></script>
 <script type="text/javascript">
@@ -54,7 +52,3 @@
 </script>
 
 
-=======
-<script type="text/javascript" src="assets/slider/js/jquery.elastislide.js"></script>
-<script type="text/javascript" src="assets/js/main.js"></script>
->>>>>>> b303b7a37d38d8b554a92723ddbd24a0de941e60
