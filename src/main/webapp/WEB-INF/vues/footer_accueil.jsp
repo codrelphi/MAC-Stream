@@ -40,19 +40,8 @@
 
 </footer>
 
-
 <script type="text/javascript" src="assets/slider/js/jquerypp.custom.js"></script>
-<<<<<<< HEAD
 <script type="text/javascript" src="assets/slider/js/jquery.elastislide.js"></script>
 <script type="text/javascript" src="assets/js/main.js"></script>
-=======
-<script type="text/javascript"
-	src="assets/slider/js/jquery.elastislide.js"></script>
-<script type="text/javascript">
-	$('#carousel').elastislide({
-		minItems : 2
-	});
-</script>
 
->>>>>>> d142fa9b30eab6cce7db2476a0ba6d3653bba3ac
 
