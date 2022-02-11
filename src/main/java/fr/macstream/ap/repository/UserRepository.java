@@ -13,5 +13,6 @@ import fr.macstream.ap.model.User;
 
 public interface UserRepository extends JpaRepository<User, Integer> {
 
+	public User findByLogin(String login);
 	
 }
