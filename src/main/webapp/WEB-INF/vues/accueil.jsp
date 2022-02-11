@@ -4,6 +4,8 @@
 <main>
 <%@ include file="carousel.jsp" %>
 </main>
+
+
 <%@ include file="footer_accueil.jsp" %>
 </body>
 </html>

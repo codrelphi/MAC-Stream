@@ -26,7 +26,7 @@ public class HomeController {
 		List<GenresEntity> genres = genreRepository.findAll();
 		model.addAttribute("films",films);
 		model.addAttribute("genres",genres);
-
+		
 	 return "accueil";
 	 }
 
