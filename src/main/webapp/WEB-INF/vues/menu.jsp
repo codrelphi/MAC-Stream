@@ -1,4 +1,3 @@
-
 <header>
 	<!-- Fixed navbar -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -17,44 +16,24 @@
 							<c:forEach var="genre" items="${genres}">
 								<a class="dropdown-item" href="#">${genre.genre}</a>
 							</c:forEach>
-<<<<<<< HEAD
 						</c:if>
 					</div></li>
-				<li class="nav-item"><a class="nav-link disabled" href="#">PLAYLIST</a>
-				</li>
 			</ul>
-			<form method="GET" action="<%= request.getContextPath() %>/produits"
+			<form method="GET"
+				action="${pageContext.request.contextPath}/rechercher"
 				class="form-inline mt-2 mt-md-0">
 				<input class="form-control mr-sm-2" type="text" name="search"
 					placeholder="Rechercher Titre Film, Série, Acteur..."
 					aria-label="Search">
 				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Recherche</button>
 			</form>
-			<div class="mx-auto" >
-				<button type="button" class="btn btn-warning" data-toflle="modal"
-					data-target="modalAuthCenter">Mon compte</button>
-=======
-							</c:if>	
-						</div></li>
-				</ul>
-				<form method="GET" action="${pageContext.request.contextPath}/rechercher"
-					class="form-inline mt-2 mt-md-0">
-					<input class="form-control mr-sm-2" type="text" name="search"
-						placeholder="Rechercher Titre Film, Série, Acteur..."
-						aria-label="Search">
-					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Recherche</button>
-				</form>
-				<button type="button" class="btn btn-success" onclick="displayAuth()">Connexion</button>
-				<button type="button" class="btn btn-secondary" onclick="displayInsc()">Inscription</button>
->>>>>>> b303b7a37d38d8b554a92723ddbd24a0de941e60
-			</div>
+			<button type="button" class="btn btn-success" onclick="displayAuth()">Connexion</button>
+			<button type="button" class="btn btn-secondary"
+				onclick="displayInsc()">Inscription</button>
 		</div>
 	</nav>
-
-<<<<<<< HEAD
 	<%@ include file="formconnexion.jsp"%>
+	<%@ include file="forminscription.jsp"%>
 </header>
-=======
 
-	</header>
->>>>>>> b303b7a37d38d8b554a92723ddbd24a0de941e60
+

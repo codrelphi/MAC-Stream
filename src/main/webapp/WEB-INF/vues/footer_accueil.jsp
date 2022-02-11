@@ -1,4 +1,3 @@
-
 <footer class="p-3 mb-2 bg-secondary text-white"">
 
 	<!-- Footer Links -->
@@ -44,17 +43,6 @@
 
 
 <script type="text/javascript" src="assets/slider/js/jquerypp.custom.js"></script>
-<<<<<<< HEAD
-<script type="text/javascript"
-	src="assets/slider/js/jquery.elastislide.js"></script>
-<script type="text/javascript">
-	$('#carousel').elastislide({
-		minItems : 2
-	});
-</script>
-
-
-=======
 <script type="text/javascript" src="assets/slider/js/jquery.elastislide.js"></script>
 <script type="text/javascript" src="assets/js/main.js"></script>
->>>>>>> b303b7a37d38d8b554a92723ddbd24a0de941e60
+

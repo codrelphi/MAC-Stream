@@ -28,7 +28,7 @@
 					</div>
 					<div class="form-group">
 						<label for="nom">Nom de compte</label>
-						<input type="text" id="nom" aria-describedby="nomHelp" placeholder="Entrez votre nom de compte" class="form-text text-muted"
+						<input type="text" id="nom" aria-describedby="nomHelp" placeholder="Entrez votre nom de compte" class="form-text text-muted">
 					</div>
 					<div class="form-group form-check">
 						<input type="checkbox" class="form-check-input" id="exampleCheck1">

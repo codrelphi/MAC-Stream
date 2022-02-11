@@ -12,13 +12,7 @@
 	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 	crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" hred="assets/fontawesome/css/all.css"/>	
-<<<<<<< HEAD
-<!--   <link rel="stylesheet" type="text/css" href="assets/slider/css/demo.css" /> -->
-=======
-<!-- <link rel="stylesheet" type="text/css" href="assets/slider/css/demo.css" /> -->
->>>>>>> b303b7a37d38d8b554a92723ddbd24a0de941e60
 <link rel="stylesheet" type="text/css" href="assets/slider/css/elastislide.css" />
-<link rel="stylesheet" type="text/css" href="assets/slider/css/custom.css" />
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script

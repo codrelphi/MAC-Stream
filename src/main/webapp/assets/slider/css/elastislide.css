@@ -1,5 +1,9 @@
 /* Elastislide Style */
 
+
+.fixed-bar{
+	padding-bottom: 2px;
+}
 .elastislide-list {
 	list-style-type: none;
 	display: none;
@@ -22,7 +26,7 @@
 }
 
 .elastislide-wrapper.elastislide-loading {
-	background-image: url(../images/loading.gif);
+	background-image: url(../images/loading-dark.gif);
 	background-repeat: no-repeat;
 	background-position: center center;
 }
