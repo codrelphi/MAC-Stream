@@ -62,7 +62,7 @@ public class FicheFilmController {
 				playListsRepository.save(plNouveau);
 			}
 		}
-		
+		 
 		return new ModelAndView("redirect:/home");
 //		MovieEntity filmFiche = movieRepository.getById(idFilm);
 //		System.out.println("Playlist Film ="+idFilm + "   User = "+idUser);

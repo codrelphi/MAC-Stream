@@ -6,4 +6,4 @@ import fr.macstream.ap.model.PlayListsEntity;
 
 public interface PlayListsRepository  extends JpaRepository<PlayListsEntity, Integer>{
 
-}
+} 

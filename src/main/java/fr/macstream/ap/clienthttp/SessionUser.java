@@ -53,7 +53,7 @@ public class SessionUser {
 			this.prenom = prenom;
 		}
 		public boolean isConnected() {
-			return connected;
+			return connected; 
 		}
 		public void setConnected(boolean connected) {
 			this.connected = connected;

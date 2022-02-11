@@ -6,7 +6,7 @@
 	</main>
 	
 <table border="0">
-	<tr>
+	<tr> 
 
 		<td width="30%" style="vertical-align: bottom;  text-align: left; margin-left: 0">
 			<a href="https://image.tmdb.org/t/p/w500/${film.getPosterPath()}"> <img alt="Qries" class="mx-auto d-block img-thumbnail " src="https://image.tmdb.org/t/p/w500/${film.getPosterPath()}"></a>

@@ -65,7 +65,7 @@ public class AuthenticateController {
 			for(SessionUser user : utilisateursConnectes) {
 				if(rawCookie.equals(user.getCookies())) {
 					return true; 
-				}
+				} 
 			}
 		} 
 		return false;
