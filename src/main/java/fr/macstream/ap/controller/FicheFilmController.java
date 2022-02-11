@@ -50,6 +50,7 @@ public class FicheFilmController {
 	@GetMapping("/playList/add")
 	public ModelAndView setMovieInPlayList(@RequestParam int idFilm, @RequestParam int idUser, Model model) {
 		boolean dejaEnregistre = false;
+			
 		List<PlayListsEntity> plBddList = playListsRepository.findAll();
 		if(plBddList!=null) {
 			for(PlayListsEntity plBdd : plBddList) {

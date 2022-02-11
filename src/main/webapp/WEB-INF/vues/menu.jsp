@@ -36,8 +36,6 @@
 =======
 							</c:if>	
 						</div></li>
-					<c:if test="${! empty sessionScope.userid}"><li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/playlist">PLAYLIST</a>
-					</li></c:if>
 				</ul>
 				<form method="GET" action="${pageContext.request.contextPath}/rechercher"
 					class="form-inline mt-2 mt-md-0">
@@ -46,8 +44,6 @@
 						aria-label="Search">
 					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Recherche</button>
 				</form>
-					<button type="button" class="btn btn-warning" data-toggle="modal" data-target="modalAuth" onclick="displayAuth()">Mon compte</button>
-					
 				<button type="button" class="btn btn-success" onclick="displayAuth()">Connexion</button>
 				<button type="button" class="btn btn-secondary" onclick="displayInsc()">Inscription</button>
 >>>>>>> b303b7a37d38d8b554a92723ddbd24a0de941e60
