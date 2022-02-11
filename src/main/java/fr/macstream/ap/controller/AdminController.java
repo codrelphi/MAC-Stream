@@ -75,7 +75,7 @@ public class AdminController {
 		List<Movie> moviesUpComing = new ArrayList<>();
 		List<Movie> moviesNowPlaying = new ArrayList<>();
 		List<Movie> moviesTopRate = new ArrayList<>();
-		try {
+		try { 
 			ResponseEntity<MovieResponse> filmsResponse = httpService.getMovies();
 			if(filmsResponse!=null && filmsResponse.getBody()!=null && filmsResponse.getBody().getResults()!=null) {
 				movies = filmsResponse.getBody().getResults();
