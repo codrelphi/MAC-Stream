@@ -21,8 +21,20 @@ public class User{
 	private int idUser;
 	
 	private String login;
+	
+	private String nom;
+	
 	private String motdepasse;
 	
+	public String getNom() {
+		return nom;
+	}
+
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
 	@ManyToMany(fetch=FetchType.LAZY)
 	@JoinTable(name="Playlists",
 	joinColumns= {@JoinColumn(name="idUser")},
@@ -73,5 +85,8 @@ public class User{
 		this.motdepasse = motdepasse;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return this.getNom() + " " + this.getLogin();
+	}
 }

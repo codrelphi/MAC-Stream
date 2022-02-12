@@ -1,7 +1,6 @@
 package fr.macstream.ap.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
 
 import fr.macstream.ap.model.User;
 
@@ -16,4 +15,7 @@ public interface UserRepository extends JpaRepository<User, Integer> {
 
 	public User findByLogin(String login);
 	
+	public User findByNom(String nom);
+
+	public User findByMotdepasse(String motdepasse);
 }

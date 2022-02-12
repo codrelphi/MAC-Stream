@@ -1,8 +1,8 @@
-<%@ include file="header.jsp"%>
+<%@ include file="components/header.jsp"%>
 <body>
-	<%@ include file="menu.jsp"%>
+	<%@ include file="components/menu.jsp" %>
 	<main>
-		<%@ include file="carousel.jsp"%>
+		<%@ include file="components/carousel.jsp"%>
 	</main>
 	
 <table border="0">
@@ -129,7 +129,7 @@
 
 
 
-	<%@ include file="footer_accueil.jsp"%>
+	<%@ include file="components/footer_accueil.jsp"%>
 </body>
 </html>
 

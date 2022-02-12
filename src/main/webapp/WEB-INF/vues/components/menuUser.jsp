@@ -27,10 +27,19 @@
 				<input class="form-control mr-sm-2" type="text" name="search"
 					placeholder="Rechercher Titre Film, Série, Acteur..."
 					aria-label="Search">
-				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Recherche</button>
+				<button class="btn btn-outline-success my-2 my-sm-0 mr-1" type="submit">Recherche</button>
 			</form>
-			<button type="button" class="btn btn-warning" data-toggle="modal"
-				data-target="modalAuth" onclick="displayAuth()">Mon compte</button>
+			<div class="dropdown">
+				<i class=""></i>
+  				<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    				Mon compte
+  				</button>
+  				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    				<a class="dropdown-item" href="${pageContext.request.contextPath}/playlist">Ma Playlist</a>
+    				<div class="dropdown-divider"></div>
+    				<a class="dropdown-item" href="${pageContext.request.contextPath}/user/deconnecter">Déconnexion</a>
+  				</div>
+			</div>
 		</div>
 	</nav>
 </header>

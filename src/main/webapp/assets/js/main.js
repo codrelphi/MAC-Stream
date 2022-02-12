@@ -3,6 +3,9 @@
  */
  $(document).ready(function(){
 	$('#carousel').elastislide({minItems : 2});
+	formValidator("#frmLogin","#btnLoginSend");
+	formValidator("#frmSignin","#btnSigninSend");
+
 });
 
 function displayAuth(){
@@ -10,47 +13,81 @@ function displayAuth(){
 }
 
 function displayInsc(){
-	$('#modalAuth').modal('hide');
 	$("#modalInsc").modal('toggle');
 }
 
 function inscrire(){
 	$.ajax({
-		method: 'POST',
-		url: 'http://localhost:8686/users/inscrire',
+		url:'http://localhost:8686/user/inscrire',
+		method: 'post',
 		data:{
-			login: $('#login').val(),
-			motdepasse: $("#motdepasse").val()
+			login: $("#login").val(),
+			motdepasse: $("#motdepasse").val(),
+			nom: $("#nom").val(),
+			rememberme: $("#rememberme").val()
 		},
-		success: function(result){
-			if(result){
-				$("#modalAuth").modal('show');
+		success:function(data){
+			if(data == true){
+				$("#modalValidationTitle").html("Inscription");
+				$("#modalValidationMsg").html("Bienvenue parmi nous, " + nom);
+				$("#modalValidation").modal('toggle');
+				setTimeout(function(){
+					$("#modalValidation").modal('hide');
+					window.location.reload();
+				},2000);
+			}
+			else{
+				$("#inscerror").html("Hélas ce compte est déjà utilisé !");
 			}
 		},
-		error: function(){
-			alert("erreur de connexion serveur");
+		error:function(error){
+			$("#inscerror").html("Problème de connexion au serveur !");	
 		}
-	})
-}	
-function connecter(){
-	$.ajax({
-		method: 'POST',
-		url: 'http://localhost:8686/users/connecter',
-		data:{
-			login: $("#username").val(),
-			motdepasse: $("#password").val()
-		},
-		success: function(result){
-			if(result){
-				window.location.reload();
-				$("#btnauthsend").attr("hidden","hidden");
-				$("#toto").html("<p> Vous êtes connecté !</p>");
-				$("#modalAuth").modal('show');
-			}
-		},
-		error: function(){
-			alert("erreur de connexion au serveur");
-		}
-	})
+		
+	});
+}
 	
+function connecter(){
+$.ajax({
+	url:"http://localhost:8686/user/connecter",
+	method: "post",
+	data: {
+		login: $("#username").val(),
+		motdepasse: $("#password").val()	
+	},
+	success:function(data){
+			if(data == true){
+				$("#modalValidationTitle").html("connexion");
+				$("#modalValidationMsg").html("Content de vous revoir " + login);
+				$("#modalValidation").modal('toggle');
+				setTimeout(function(){
+					$("#modalValidation").modal('hide');
+					window.location.reload();
+				},2000);
+			}
+			else{
+				$("#connerror").html("Login ou mot de passe incorrecte !");
+			}
+		
+	},
+	error:function(error){
+		$("#connerror").html("Problème de connexion au serveur !");	
+	}
+});
+}
+
+function formValidator(form, submitbtn){
+	let inputs = $(form + ">div>input").attr("required","required");
+
+	inputs.on("input",function(){
+		let isFormCompleted = true;
+		for(let i = 0; i < inputs.length; i++){
+			if(! (inputs[i].value))
+				isFormCompleted = false;
+		}
+		if(isFormCompleted == true)
+			$(submitbtn).removeAttr("disabled");
+		else
+			$(submitbtn).attr("disabled","disabled");	
+	});
 }

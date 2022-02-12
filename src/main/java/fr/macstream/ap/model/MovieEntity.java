@@ -29,6 +29,7 @@ public class MovieEntity {
 	private boolean video;
 	private Float moyenneVotes;
 	private Float decompteVote;
+	
 	private int idGenre;
 	private String type;
 

@@ -1,28 +1,12 @@
-<%@ include file="header.jsp" %>
+<%@ include file="components/header.jsp" %>
 <body>
 	<!-- Affichage du menu -->
-	<c:choose>
-		<c:when test="${empty sessionScope.userid}">
-			<%@ include file="menu.jsp"%>
-		</c:when>
-		<c:otherwise>
-			<%@ include file="menuUser.jsp"%>
-		</c:otherwise>
-	</c:choose>
-	<%@ include file="carousel.jsp"%>
+	<%@ include file="components/menu.jsp" %>
+	<%@ include file="components/carousel.jsp"%>
 <!-- Affichage de la partie principale  -->
 	<main>
-		<div class="container">
-			<div class="row justify-content-start">
-				<div class="col col-lg-2">
-<!-- Charles tu peux placer ici la liste des genres  -->
-				</div>
-				<div class="col col-lg-10">
-					<%@ include file="body.jsp"%>
-				</div>
-			</div>
-		</div>
+	<%@ include file="components/accueilBody.jsp" %>
 	</main>
-	<%@ include file="footer_accueil.jsp"%>
+	<%@ include file="components/footer_accueil.jsp"%>
 </body>
 </html>

@@ -25,15 +25,14 @@
 				<input class="form-control mr-sm-2" type="text" name="search"
 					placeholder="Rechercher Titre Film, Série, Acteur..."
 					aria-label="Search">
-				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Recherche</button>
+				<button class="btn btn-outline-success my-2 my-sm-0 mr-1" type="submit">Recherche</button>
 			</form>
-			<button type="button" class="btn btn-success" onclick="displayAuth()">Connexion</button>
+			<button type="button" class="btn btn-success mr-1" onclick="displayAuth()">Connexion</button>
 			<button type="button" class="btn btn-secondary"
 				onclick="displayInsc()">Inscription</button>
 		</div>
 	</nav>
 	<%@ include file="formconnexion.jsp"%>
 	<%@ include file="forminscription.jsp"%>
+	<%@ include file="popupactionvalide.jsp" %>
 </header>
-
-

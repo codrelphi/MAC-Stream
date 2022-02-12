@@ -12,7 +12,6 @@ import fr.macstream.ap.model.MovieEntity;
 import fr.macstream.ap.repository.MovieRepository;
 import fr.macstream.ap.repository.UserRepository;
 
-@RestController
 public class PlaylistController {
 	@Autowired
 	UserRepository userRepo;
@@ -25,6 +24,10 @@ public class PlaylistController {
 		
 	}
 	//voir setMovieInPlayList dans le controller "FicheFilmController.java"
+	
+	
+	@GetMapping("/playlist")
+	
 	
 	@PostMapping("/playlist/addd")
 	public boolean ajouterFilmPlaylist(@RequestParam int idFilm) {
