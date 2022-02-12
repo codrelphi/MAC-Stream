@@ -4,7 +4,7 @@
 		<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
 			<a class="navbar-brand" href="#">MACStream</a>
 			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-				<li class="nav-item active"><a class="nav-link" href="#">ACCUEIL
+				<li class="nav-item active"><a class="nav-link" href="${pageContext.request.contextPath}/home">ACCUEIL
 						<span class="sr-only">(current)</span>
 				</a></li>
 				<li class="nav-item dropdown"><a

@@ -28,11 +28,12 @@ function inscrire(){
 		},
 		success:function(data){
 			if(data == true){
+				displayInsc();
 				$("#modalValidationTitle").html("Inscription");
-				$("#modalValidationMsg").html("Bienvenue parmi nous, " + nom);
-				$("#modalValidation").modal('toggle');
+				$("#modalValidationMsg").html("Bienvenue parmi nous, " + $("#nom").val());
+				$("#modalvalidation").modal('toggle');
 				setTimeout(function(){
-					$("#modalValidation").modal('hide');
+					$("#modalvalidation").modal('hide');
 					window.location.reload();
 				},2000);
 			}
@@ -57,11 +58,12 @@ $.ajax({
 	},
 	success:function(data){
 			if(data == true){
+				displayAuth();
 				$("#modalValidationTitle").html("connexion");
-				$("#modalValidationMsg").html("Content de vous revoir " + login);
-				$("#modalValidation").modal('toggle');
+				$("#modalValidationMsg").html("Content de vous revoir !");
+				$("#modalvalidation").modal('toggle');
 				setTimeout(function(){
-					$("#modalValidation").modal('hide');
+					$("#modalvalidation").modal('hide');
 					window.location.reload();
 				},2000);
 			}
@@ -75,6 +77,34 @@ $.ajax({
 	}
 });
 }
+
+function deconnecter(){
+	$.ajax({
+	url:"http://localhost:8686/user/deconnecter",
+	method: "get",
+	data: {
+	},
+	success:function(data){
+			if(data == true){
+				$("#modalValidationTitle").html("déconnexion");
+				$("#modalValidationMsg").html("A bientôt !");
+				$("#modalvalidation").modal('toggle');
+				setTimeout(function(){
+					$("#modalvalidation").modal('hide');
+					window.location.replace("http://localhost:8686/home");
+				},2000);
+			}
+			else{
+				$("#connerror").html("Hmm, vous n'étiez pas connecté !");
+			}
+		
+	},
+	error:function(error){
+		$("#connerror").html("Problème de connexion au serveur !");	
+	}
+});
+}
+
 
 function formValidator(form, submitbtn){
 	let inputs = $(form + ">div>input").attr("required","required");

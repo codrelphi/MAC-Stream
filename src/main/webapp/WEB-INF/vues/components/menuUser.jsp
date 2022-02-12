@@ -4,7 +4,7 @@
 		<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
 			<a class="navbar-brand" href="#">MACStream</a>
 			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-				<li class="nav-item active"><a class="nav-link" href="#">ACCUEIL
+				<li class="nav-item active"><a class="nav-link" href="${pageContext.request.contextPath}/home">ACCUEIL
 						<span class="sr-only">(current)</span>
 				</a></li>
 				<li class="nav-item dropdown"><a
@@ -37,9 +37,10 @@
   				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
     				<a class="dropdown-item" href="${pageContext.request.contextPath}/playlist">Ma Playlist</a>
     				<div class="dropdown-divider"></div>
-    				<a class="dropdown-item" href="${pageContext.request.contextPath}/user/deconnecter">Déconnexion</a>
+    				<button class="btn dropdown-item" type="button" onclick="deconnecter()">Déconnexion</button>
   				</div>
 			</div>
 		</div>
 	</nav>
+	<%@ include file="popupactionvalide.jsp" %>
 </header>
